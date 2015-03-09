@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -54,6 +55,24 @@ namespace WindowsFormsApplication1
             if (dialogResult == DialogResult.OK)
             {
                 logoPath.Text = openFileDialog.FileName;
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://wincn.net");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Process.Start("mailto:gefangshuai@163.com");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
             }
         }
     }

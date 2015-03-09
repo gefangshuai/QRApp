@@ -33,10 +33,12 @@
             this.generateBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.logoPath = new System.Windows.Forms.TextBox();
             this.selectLogoBtn = new System.Windows.Forms.Button();
+            this.logoPath = new System.Windows.Forms.TextBox();
             this.qrPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox)).BeginInit();
@@ -84,14 +86,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "选择Logo图片(可不填)";
             // 
-            // logoPath
-            // 
-            this.logoPath.BackColor = System.Drawing.SystemColors.Window;
-            this.logoPath.Location = new System.Drawing.Point(6, 21);
-            this.logoPath.Name = "logoPath";
-            this.logoPath.Size = new System.Drawing.Size(222, 21);
-            this.logoPath.TabIndex = 0;
-            // 
             // selectLogoBtn
             // 
             this.selectLogoBtn.Location = new System.Drawing.Point(237, 20);
@@ -102,8 +96,17 @@
             this.selectLogoBtn.UseVisualStyleBackColor = true;
             this.selectLogoBtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // logoPath
+            // 
+            this.logoPath.BackColor = System.Drawing.SystemColors.Window;
+            this.logoPath.Location = new System.Drawing.Point(6, 21);
+            this.logoPath.Name = "logoPath";
+            this.logoPath.Size = new System.Drawing.Size(222, 21);
+            this.logoPath.TabIndex = 0;
+            // 
             // qrPictureBox
             // 
+            this.qrPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("qrPictureBox.Image")));
             this.qrPictureBox.Location = new System.Drawing.Point(6, 21);
             this.qrPictureBox.Name = "qrPictureBox";
             this.qrPictureBox.Size = new System.Drawing.Size(289, 280);
@@ -121,11 +124,35 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "二维码预览(双击图片可保存)";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 500);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(83, 12);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "作者： 葛方帅";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(149, 499);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(161, 12);
+            this.linkLabel2.TabIndex = 8;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Email：gefangshuai@163.com";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 492);
+            this.ClientSize = new System.Drawing.Size(322, 519);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -143,6 +170,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -155,6 +183,8 @@
         private System.Windows.Forms.TextBox logoPath;
         private System.Windows.Forms.PictureBox qrPictureBox;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 
